@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <h1>Car Information</h1>
+    <div class="car-info" id="carInfo"></div>
 
+    <script src="script.js"></script>
+    <script>
+        const car = new SportsCar("Ferrari", "Testarossa", 200);
+        document.getElementById('carInfo').innerHTML = `
+            Make and Model: ${car.getMakeModel()}<br>
+            Top Speed: ${car.getTopSpeed()} mph
+        `;
+    </script>
 </body>
-
 </html>
